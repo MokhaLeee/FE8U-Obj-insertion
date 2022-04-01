@@ -9,14 +9,8 @@
 FE8U-*.png
 HACK-*.png
 
-*.lyn.event
-*.asm
 *.o
-*.dmp
 
-*.lz
-*.4bpp
-*.gbapal
 
 *Map.event
 
