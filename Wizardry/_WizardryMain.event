@@ -1,0 +1,15 @@
+#ifndef WIZARDRY
+#define WIZARDRY
+
+
+// This file is the main file that includes Wizardry (aka Engine Hacks or Asm Hacks)
+// It plays the same role as "Master Hack Installers" from other buildfiles.
+
+
+#include "_FE8EssentialFixes.event"
+#include "UnitMenu.event"
+
+#include "UnitStatusGetter/bmunit.lyn.event"
+
+
+#endif // WIZARDRY
