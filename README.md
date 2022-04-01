@@ -1,5 +1,8 @@
 # FE8U Custom Object insert hack by Mokha
 
+![image](https://github.com/MokhaLeee/FE8U-Obj-insertion/tree/master/gfx/effect.gif)
+
+
 A test to insert own OAMs.
 
 You just need to take `FE8U-CustomObj.event` through EA.
