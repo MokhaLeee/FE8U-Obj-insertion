@@ -1,0 +1,57 @@
+
+// we will put prep-screen' At-menu help-button obj as for debug 
+// so you need to get into a chapter with PrepScreen to see the effect
+#define __DEBUG__
+
+
+
+
+
+
+
+
+// FreeSpace
+#ifndef FreeSpace
+	#define FreeSpace $B2A610
+	ORG FreeSpace
+#endif // FreeSpace
+
+
+// Lyn Jump
+#ifndef LynJumpDefined
+	#define LynJumpDefined
+	#define LynJump(aTarget) "WORD $46C04778 $E59FC000 $E12FFF1C; POIN aTarget; "
+#endif // LynJumpDefined
+
+
+
+
+// Main
+#include "src/FE8U-CustomObj.lyn.event"
+#include "src/Debug.lyn.event"
+
+
+
+ALIGN 4
+Gfx_ObjGfx:
+	#incbin "gfx/ObjGfx.4bpp.lz"
+
+
+ALIGN 4
+Pal_ObjGfx:
+	#incbin "gfx/ObjGfx.gbapal"
+	
+	
+
+// Debug
+#ifdef __DEBUG__
+
+PUSH
+	ORG $033620
+	LynJump(StartProc_CustomObj)
+	
+	ORG $033634
+	LynJump(EndProc_CustomObj)
+POP
+
+#endif // __DEBUG__
