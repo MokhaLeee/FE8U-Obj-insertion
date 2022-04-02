@@ -72,7 +72,7 @@ void ProcCustomObj_OnUpdate(struct Proc_CustomObj* proc){
 	
 	proc->timer++;
 	
-	// for Obj blanking
+	// for Obj blinking
 	if( (proc->timer & 0x3F) < 0x20 )
 		return;
 	

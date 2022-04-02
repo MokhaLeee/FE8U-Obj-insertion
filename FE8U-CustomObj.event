@@ -1,13 +1,6 @@
 
-// we will put prep-screen' At-menu help-button obj as for debug 
-// so you need to get into a chapter with PrepScreen to see the effect
+// Debug
 #define __DEBUG__
-
-
-
-
-
-
 
 
 // FreeSpace
@@ -28,10 +21,10 @@
 
 // Main
 #include "src/FE8U-CustomObj.lyn.event"
-#include "src/Debug.lyn.event"
 
 
 
+// Gfx
 ALIGN 4
 Gfx_ObjGfx:
 	#incbin "gfx/ObjGfx.4bpp.lz"
@@ -47,6 +40,9 @@ Pal_ObjGfx:
 #ifdef __DEBUG__
 
 PUSH
+	// we will put prep-screen' At-menu help-button obj as for debug 
+	// so you need to get into a chapter with PrepScreen to see the effect
+	
 	ORG $033620
 	LynJump(StartProc_CustomObj)
 	
