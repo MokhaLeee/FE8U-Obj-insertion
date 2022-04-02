@@ -38,7 +38,7 @@ static void ProcCustomObj_OnUpdate(struct Proc_CustomObj* proc);
 const static struct ProcCmd gProc_PrepSkillPutObj[] = {
 	
 	PROC_NAME	("FE8U_CUSTOM_OBJ"),
-	
+
 	PROC_CALL	(ProcCustomObj_OnDraw),
 	PROC_REPEAT	(ProcCustomObj_OnUpdate),
 	
