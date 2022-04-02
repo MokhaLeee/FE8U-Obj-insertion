@@ -10,8 +10,8 @@ enum{
 	// Real VRAM Offset to uncompress: OBJ_VRAM0 + CUSTOME_OBJ_VRAMOFF
 	CUSTOME_OBJ_VRAMOFF = 0x4800, 
 	
-	// Real Palette index: CUSTOME_OBJ_PALID
-	CUSTOME_OBJ_PALID = 0x13,
+	// Real Palette index: CUSTOME_OBJ_PALID + 0x10
+	CUSTOME_OBJ_PALID = 0x3,
 };
 
 
@@ -57,7 +57,7 @@ void ProcCustomObj_OnDraw(struct Proc_CustomObj* proc){
 	CopyDataWithPossibleUncomp( Gfx_ObjGfx, OBJ_VRAM0 + CUSTOME_OBJ_VRAMOFF ); 
 	
 	// Pal
-	ApplyPalettes(Pal_ObjGfx, CUSTOME_OBJ_PALID, 1);
+	ApplyPalettes(Pal_ObjGfx, CUSTOME_OBJ_PALID + 0x10, 1);
 	
 	// Init timer
 	proc->timer = 0;
