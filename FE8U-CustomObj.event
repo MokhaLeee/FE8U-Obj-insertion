@@ -20,21 +20,36 @@
 
 
 // Main
-#include "src/FE8U-CustomObj.lyn.event"
+#include "src/Debug.lyn.event"
+#include "src/ObjMokha.lyn.event"
+#include "src/ObjWindow.lyn.event"
 
 
 
-// Gfx
+// obj "Mokha"
 ALIGN 4
-Gfx_ObjGfx:
-	#incbin "gfx/ObjGfx.4bpp.lz"
-
+Gfx_ObjMokha:
+	#incbin "gfx/ObjMokha.4bpp.lz"
 
 ALIGN 4
-Pal_ObjGfx:
-	#incbin "gfx/ObjGfx.gbapal"
-	
-	
+Pal_ObjMokha:
+	#incbin "gfx/ObjMokha.gbapal"
+
+
+
+
+// Obj window	
+ALIGN 4
+Gfx_ObjWindow:
+	#incbin "gfx/Obj_Window.4bpp.lz"
+
+ALIGN 4
+Pal_ObjWindow:
+	#incbin "gfx/Obj_Window.gbapal"
+
+
+
+
 
 // Debug
 #ifdef __DEBUG__
@@ -44,10 +59,10 @@ PUSH
 	// so you need to get into a chapter with PrepScreen to see the effect
 	
 	ORG $033620
-	LynJump(StartProc_CustomObj)
+	LynJump(Debug_OnPutTestObjs)
 	
 	ORG $033634
-	LynJump(EndProc_CustomObj)
+	LynJump(Debug_OnRemoveTestObjs)
 POP
 
 #endif // __DEBUG__

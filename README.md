@@ -2,6 +2,7 @@
 
 ![image](gfx/effect.gif)
 
+![image](gfx/Applying.gif)
 
 A test to insert own OAMs.
 

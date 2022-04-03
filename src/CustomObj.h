@@ -4,6 +4,24 @@
 #include "gbafe.h"
 // =================================
 
+struct Proc_CustomObj{
+	
+	/* 00 */ PROC_HEADER;
+	/* 29 */ u8 timer;
+	
+};
 
-void StartProc_CustomObj(ProcPtr parent);
-void EndProc_CustomObj();
+
+// Debug
+void Debug_OnPutTestObjs(ProcPtr);
+void Debug_OnRemoveTestObjs();
+
+
+// Obj "Mokha"
+void StartProc_ObjMokha(ProcPtr);
+void EndProc_ObjMokha();
+
+
+// Obj Window
+void Draw_ObjWindow(ProcPtr);
+void Remove_ObjMokha();
